@@ -1,6 +1,6 @@
  <div align="center">
   
-# Java programming code list
+# Java Coding List
 
 ```
   
