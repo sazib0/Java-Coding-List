@@ -17,7 +17,10 @@ class PrintNumbers implements Runnable {
             try {
                 Thread.sleep(1000); // Sleep for 1 second
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                // Properly handle the interruption
+                System.err.println(Thread.currentThread().getName() + " was interrupted");
+                Thread.currentThread().interrupt(); // Restore the interrupt status
+                break;
             }
         }
     }
